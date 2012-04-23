@@ -146,3 +146,4 @@ Logfile initialized
 [DEBUG] Device connected... (waited 0 seconds)
 [DEBUG] waited 0.036354 seconds on emulator to get ready
 [INFO] Installing application on device
+[INFO] Application installed. Launch from drawer on Home Screen
