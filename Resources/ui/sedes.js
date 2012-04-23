@@ -82,7 +82,7 @@ var sedesTV = Titanium.UI.createTableView({
 	maxRowHeight : '60dp',
 	
 	editable : true,
-	//backgroundColor:'#f0efee',
+	backgroundColor:'#C2935F',
 	search: search,
     filterAttribute:'filter',
 });
