@@ -138,7 +138,6 @@ parsearJson = function(num) {
 
 			if(num==1){
 				new BaseDeDatos().EliminarTablas();
-				Ti.API.info("Se elimina base de datos");
 				};
 
 			for( i = 0; i < json.length; i++) {
@@ -254,6 +253,8 @@ sedesTV.addEventListener('click', function(e){
 //sedes.add(view);
 //sedes.add(search);
 sedes.add(sedesTV);
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //  menu del botón

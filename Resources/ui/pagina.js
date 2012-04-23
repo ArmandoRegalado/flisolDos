@@ -31,6 +31,29 @@ ventanaL.add(logoPantalla);
 
 ventanaL.add(webP);
 
+var activityIndicator = Ti.UI.createActivityIndicator({
+});
+
+	
+	webP.addEventListener('beforeload', function(){
+    
+    		activityIndicator.show();
+    
+});
+ 
+webP.addEventListener('load', function(){
+    
+    		activityIndicator.hide();
+});
+ 
+webP.addEventListener('error', function(){
+    
+    		activityIndicator.hide();
+    
+});
+
+
+
 
 
 	return ventanaL;

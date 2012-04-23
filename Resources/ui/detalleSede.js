@@ -123,92 +123,35 @@ var haciaPagina = Titanium.UI.createImageView({
 	
 });
 footer.add(haciaPagina);
-//lert(pagina1);
+
 haciaPagina.addEventListener('click', (function(){
-	//alert(pagina1);
-	
-	// var pagina = Ti.UI.createWindow({
-		// //title:e.rowData.id,
-		// url:'/ui/pagina.js',
-		// idu:pagina1,
-		// navBarHidden:true ,
-	// });
-	// //alert  (sede.title);
-	// pagina.open({modal:true})
-	
-	
-	//alert (pagina1);
-	var paginas = new pagW(pagina1);
+	if(Titanium.Network.online) {
+				var paginas = new pagW(pagina1);
 	paginas.open({modal:true});
-	//alert (pagina1);
+
+			} else {
+				alert('Necesitas Conexion a Internet');
+			}
+
+	
 }));
 
 
-//hacia el mapa
 var haciaMapa = Titanium.UI.createImageView({
 	image:'../images/haciaMapa.png',
 	height:'55dp',
 	width:'200dp',
 	top:'70%',
-
 	
 });
 footer.add(haciaMapa);
 
-haciaMapa.addEventListener('click', (function(e){
-	// var mapa = Ti.UI.createWindow({
-		// //title:e.rowData.id,
-		// url:'/ui/mapa.js',
-		// //ID:E,
-		// navBarHidden:true ,
-		// id:sede.ID
-//	})//;
-	//
-	//mapa.open({modal:true})
-	
-	//var mapaPrueba = new mapaL('19.4311','-99.1367');
-//	mapaPrueba.open({modal:true});
+haciaMapa.addEventListener('click', function(){
 
-var mapaDB = new BaseDeDatos().InformacionMapaIndividual(sede.ID);
-
-var mapaPrueba = new mapaL(mapaDB[0].latitud,mapaDB[0].longitud);
-	mapaPrueba.open({modal:true});
-	
-}));
-
-
-// data = [{
-	// leftImage : '/images/casa.png',
-	// title : 'Pagina',
-	// hasChild : true
-// }, {
-	// leftImage : '/images/mapa.png',
-	// title : ' Mapa',
-	// hasChild : true
-// }, {
-	// leftImage : '/images/contacto.png',
-	// title : 'Contacto',
-	// hasChild : true
-// }];
-
-// var table = Ti.UI.createTableView({
-	// editable : true,
-	// backgroundColor : '#f0efee',
-	// top : '190dp',
-	// width : '200p',
-	// height : '130dp',
-	// left : '60dp',
-	// data : data,
-	// editable : true,
-	// opacity : '.8',
-	// //rowBackgroundColor : 'white',
-	// //rowHeight : 'auto',
-	// barColor : 'black',
-	// //style:Titanium.UI.iPhone.TableViewStyle.PLAIN,
-// });
-
-//
-
+		
+		var mapaPrueba = new mapaL();
+		mapaPrueba.open({modal:true});
+});
 
 
 footer.add(lugar);
@@ -216,35 +159,4 @@ footer.add(imagen);
 footer.add(nombre);
 footer.add(horario);
 
-
-//el boton view regeresa a la ventana anterior
-// view.addEventListener('click', function(e) {
-	// sede.close();
-// });
-
-// table.addEventListener('click', function(e) {
-// 
-	// if(e.index == 0) {
-		// var pagina = sedeBD[0].pagina;
-		// var win = Ti.UI.createWindow({
-			// url : '/ui/pagina.js',
-			// pagina : pagina,
-		// });
-		// win.open();
-	// } else {
-		// if(e.index == 1) {
-			// var id = sedeBD[0].idSede;
-			// var logo = sedeBD[0].logo;
-			// var win = Ti.UI.createWindow({
-				// url : '/ui/mapa.js',
-				// id : id,
-				// logo:logo
-			// });
-			// win.open();
-		// }
-// 		
-	// }
-// });
-//sede.add(table);
-//sede.add(view);
 sede.add(footer);

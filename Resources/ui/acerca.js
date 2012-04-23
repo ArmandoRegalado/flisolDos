@@ -3,49 +3,6 @@ var acerca = Ti.UI.currentWindow;
 
 acerca.backgroundColor='#000';
 
-// var view = Ti.UI.createView({
-// backgroundColor : '#f1701c',
-// width : 320,
-// height : 44,
-// top : 0,
-// });
-// 
-// acerca.add(view);
-// 
-// 
-// 
-// var boton = Titanium.UI.createButton({
-// title:'prueba',
-// top:100,
-// });
-// 
-// acerca.add(boton);
-// 
-// boton.addEventListener('click', function(e){
-// alert( new BaseDeDatos().NumeroDeFilas());
-// });
-// 
-// var historia = Ti.UI.createLabel({
-// text:'Historia',
-// left:'40dp',
-// top:'45dp',
-// width:'300dp',
-// height:'35dp',
-// font : {
-// fontSize : '30dp',
-// //fontWeight : 'bold',
-// fontFamily:'Arial'
-// },
-// shadowColor:'#aaa',
-// shadowOffset:{x:3,y:3},
-// color:'#4b819c'
-// 
-// });
-// 
-
-// acerca.add(historia);
-
-
 var logoPantalla = Titanium.UI.createImageView({
 image:'../images/FLISOLgeneral.png',
 height:'40dp',
@@ -168,7 +125,7 @@ borderWidth:'3',
 //top : '50dp',
 left:'15dp',
 right:'15dp',
-heigth:'180dp',
+heigth:'200dp',
 //down:'25dp',
 
 top : '5dp',
@@ -180,32 +137,10 @@ text : 'El Festival Latinoamericano de Instalación de Software Libre (FLISoL) e
 left : '20',
 //	height : '180dp',
 top : '2dp',
-width:'240dp',
+width:'200dp',
 color: '#312c2a'
 });
 marco.add(queEs);
-var contactos = Ti.UI.createLabel({
-text : 'created by: @__arch3r, @AddielJuarez',
-left : '20',
-//height : '200dp',
-top : '150dp',
-width:'240dp',
-color: '#312c2a',
-font:{size:'7dp'}
-});
-marco.add(contactos);
-
-var contactos2 = Ti.UI.createLabel({
-text : 'Design: Denisse López',
-left : '20',
-//	height : '200dp',
-top : '170dp',
-width:'240dp',
-color: '#312c2a',
-font:{size:'7dp'}
-});
-marco.add(contactos2);
-
 
 cuadroPrincipal.add(acerca1);
 cuadroPrincipal.add(acerca2);
@@ -219,3 +154,28 @@ cuadroPrincipal.add(acerca9);
 cuadroPrincipal.add(acerca10);
 cuadroPrincipal.add(acerca11);
 cuadroPrincipal.add(acerca12);
+
+
+if(Titanium.Platform.osname == 'android') {
+
+	var activity = Ti.Android.currentActivity;
+
+	activity.onCreateOptionsMenu = function(e) {
+		var menu = e.menu;
+
+		var acercaAlert = menu.add({
+			title : "Acerca"
+		});
+
+		acercaAlert.addEventListener("click", function(e) {
+			 var alertDialog = Titanium.UI.createAlertDialog({
+              title: 'Acerca',
+              message: 'Aplicacion creada por @__arch3r, @addieljuarez, Denisse Lopez ',
+              buttonNames: ['OK']
+            });
+            alertDialog.show();
+			
+		});
+	}
+}
+

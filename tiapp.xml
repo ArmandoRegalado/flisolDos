@@ -14,9 +14,9 @@
         <target device="blackberry">false</target>
     </deployment-targets>
     <sdk-version>2.0.1.GA2</sdk-version>
-    <id>com.FAM.flisolfinal</id>
-    <name>FlisolFinal</name>
-    <version>1.0</version>
+    <id>com.flisol2012</id>
+    <name>Flisol</name>
+    <version>1.2</version>
     <publisher>addiel</publisher>
     <url>http://</url>
     <description>not specified</description>
@@ -27,7 +27,7 @@
     <statusbar-style>default</statusbar-style>
     <statusbar-hidden>false</statusbar-hidden>
     <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
+    <navbar-hidden>true</navbar-hidden>
     <analytics>true</analytics>
     <guid>cf89f5c3-becf-4049-8709-273f5bc2b6bd</guid>
     <property name="ti.ui.defaultunit">system</property>
