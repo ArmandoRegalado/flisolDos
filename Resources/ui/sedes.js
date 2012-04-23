@@ -62,7 +62,7 @@ parsearBd = function(){
 
 				var caja = Titanium.UI.createTableViewRow({
 					id : json[i].idSede,
-					//hasChild : true,
+					hasChild : false,
 					filter:json[i].nombre,
 					backgroundColor : '#fff',
 				});
@@ -147,6 +147,7 @@ parsearJson = function(num) {
 					id : json[i].id_sede,
 					hasChild : true,
 					filter:json[i].nombre,
+					backgroundColor : '#fff',
 				});
 				var logoSede = Titanium.UI.createImageView({
 					height : '47dp',

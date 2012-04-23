@@ -13,23 +13,10 @@ var tableView = Ti.UI.createTableView({
 	height : 440,
 	width : 300,
 	top : 10,
-	left : 10
+	left : 10,
+	backgroundColor:'#000'
 });
 
-tableView.addEventListener("click", function(el) {
-
-var detalle=	Ti.UI.createWindow({
-		title : "Detalhe",
-		url : "/ui/detalleTweet.js",
-		tweet : el.rowData.tweet,
-		user_name : el.rowData.user_name,
-		backgroundColor : "#fff",
-		_parent : Titanium.UI.currentWindow,
-		navGroup : tweet.navGroup,
-		rootWindow : tweet.rootWindow,
-	});
-	tweet.navGroup.open(detalle);
-});
 
 tweet.add(tableView);
 
@@ -45,9 +32,10 @@ loaderTwitterSearch.onload = function() {
 	for(var i = 0; i < tweets.length; i++) {
 		var row = Ti.UI.createTableViewRow({
 			height : 50,
-			hasChild : true,
 			tweet : tweets[i].text,
-			user_name : tweets[i].from_user
+			user_name : tweets[i].from_user,
+			backgroundColor : '#fff',
+			hasChild : false,
 		});
 
 		var image = Ti.UI.createImageView({
@@ -62,7 +50,7 @@ loaderTwitterSearch.onload = function() {
 		var name = Ti.UI.createLabel({
 			text : tweets[i].from_user,
 			font : {
-				fontSize : 13
+				fontSize : '14dp',
 			},
 			left : 50,
 			top : 5,
@@ -74,7 +62,10 @@ loaderTwitterSearch.onload = function() {
 			text : tweets[i].text,
 			left : 50,
 			height : 30,
-			top : 20
+			top : 20,
+			font : {
+				fontSize : '12dp',
+			}
 		});
 		row.add(tweet);
 

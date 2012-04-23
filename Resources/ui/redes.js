@@ -10,20 +10,6 @@
 tweet = Ti.UI.currentWindow;
 tweet.backgroundColor='#000';
 
-// var regresar = Ti.UI.createImageView({
-	// image:'../images/BARRITA.png',
-	// width : '320dp',
-	// height : '35dp',
-	// top : '0dp',
-// });
-// winRedes.add(regresar);
-
-// regresar.addEventListener('click', function(e) {
-	// winRedes.close();
-// });
-
-
-
 
 //imagen y logo de flisol
 var logoPantalla = Titanium.UI.createImageView({
@@ -37,10 +23,7 @@ tweet.add(logoPantalla);
 
 // cuadro grande contenedor
 var cuadroPrincipal= Ti.UI.createView({
-	borderRadius:7,
-	backgroundColor:'#fff',
-	borderColor:'#f1701c',
-	borderWidth:'6',
+	backgroundColor:'#000',
 	left:'15dp',
 	right:'15dp',
 	down:'25dp',
@@ -68,6 +51,8 @@ var tableView = Ti.UI.createTableView({
 	right:'15dp',
 	down:'25dp',
 	top : '50dp',
+	backgroundColor:'#000',
+	minRowHeight : '55dp',
 });
 
 // tableView.addEventListener("click", function(el) {
@@ -99,16 +84,16 @@ loaderTwitterSearch.onload = function() {
 	for(var i = 0; i < tweets.length; i++) {
 		var row = Ti.UI.createTableViewRow({
 			height : '70dp',
-			hasChild : true,
+			hasChild : false,
 			tweet : tweets[i].text,
-			user_name : tweets[i].from_user
+			user_name : tweets[i].from_user,
+			backgroundColor:'#fff'
 		});
 
 		var image = Ti.UI.createImageView({
 			image : tweets[i].profile_image_url,
 			left : '7dp',
-			top : '17dp',
-			bottom : '5dp',
+			top : '10dp',
 			width : '30dp',
 			height:'30dp',
 		});
@@ -117,7 +102,8 @@ loaderTwitterSearch.onload = function() {
 		var name = Ti.UI.createLabel({
 			text : tweets[i].from_user,
 			font : {
-				fontSize : '8dp'
+				fontSize : '10dp',
+				fontWeight : 'bold'
 			},
 			left : '40dp',
 			top : '5dp',
@@ -129,13 +115,13 @@ loaderTwitterSearch.onload = function() {
 		var tweet = Ti.UI.createLabel({
 			text : tweets[i].text,
 			left : '40dp',
-			right:'5dp',
 			font : {
-				fontSize : '8.5dp'
+				fontSize : '12dp'
 			},
 			height : '20dp',
 			top : '18dp',
-			width:'200dp',
+			width:'250dp',
+			height : '43dp',
 			color:'#000'
 		});
 		row.add(tweet);
@@ -170,7 +156,6 @@ if(Titanium.Platform.osname == 'android') {
 		//para que se abra la ventana de autentificacion
 		actualizar.addEventListener("click", function(e) {
 			//sedesTV.setData();
-	        alert('Actualizando');
 			//parsearJson(1);
 			tweet.close();
 			tweet.open();
