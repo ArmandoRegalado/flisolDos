@@ -15,7 +15,7 @@ var mapview = Titanium.Map.createView({
 	height:Ti.UI.SIZE,
 	width:Ti.UI.SIZE,
 	mapType: Titanium.Map.STANDARD_TYPE,
-	region:{latitude:19.4311, longitude:-99.1367, latitudeDelta:0.2, longitudeDelta:0.3},
+	region:{latitude:19.4311, longitude:-99.1367, latitudeDelta:0.1, longitudeDelta:0.1},
 	animate:true,
 	regionFit:true,
 	userLocation:true

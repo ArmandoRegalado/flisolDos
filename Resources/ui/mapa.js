@@ -24,7 +24,7 @@ ventanaM.add(logoPantalla);
 var detalle = Titanium.Map.createAnnotation({
 latitude:parseFloat(lat), 
 longitude:parseFloat(log),
-pincolor:Titanium.Map.ANNOTATION_RED,
+image:'../images/map-marker.png',
 animate:true,
 });
 

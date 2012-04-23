@@ -12,26 +12,11 @@ Titanium.include('/data/images.js');
 
 var sedes = Ti.UI.currentWindow;
 sedes.backgroundColor = '#000';
-//sedes.backgroundImage = '../image/general.jpg';
-// var view = Titanium.UI.createView({
-	// backgroundColor : '#f1701c',
-	// width : 'auto',
-	// height : '35dp',
-	// top : '0dp',
-// 	
-// });
-// var labelActualizar = Titanium.UI.createLabel({
-	// text:'Toque aqui para actualizar la lista'
-// });
-// 
-// sedes.add(labelActualizar);
 
+var activityIndicator = Ti.UI.createActivityIndicator({});
 
-//
-// buscador
-//
 var search = Titanium.UI.createSearchBar({
-	//barColor : '#f38239',
+	  barColor: '#385292', 
 	height : '40dp',
 	hintText : 'Busca tu sede',
 	top : '0dp',
@@ -39,9 +24,7 @@ var search = Titanium.UI.createSearchBar({
 	
 });
 
-//
-// logo y texto de flisol
-//
+
 var logoPantalla = Titanium.UI.createImageView({
 	image:'../images/FLISOLgeneral.png',
 	height:'40dp',
@@ -51,23 +34,6 @@ var logoPantalla = Titanium.UI.createImageView({
 });
 sedes.add(logoPantalla);
 
-// var labelFlisol = Titanium.UI.createLabel({
-	// text:'      FLISOL    2012',
-	// font:
-	// {
-		// fontSize : '30dp',
-		// fontWeight : 'bold',
-	// },
-	// //color:'#fff',
-	// top:'5dp'
-// });
-// sedes.add(labelFlisol)
-
-
-
-//
-//cuadro contenedor principal
-//
 
 var sedesTV = Titanium.UI.createTableView({
 	//borderRadius:7,
@@ -80,9 +46,8 @@ var sedesTV = Titanium.UI.createTableView({
 	//width:'25dp',
 	minRowHeight : '55dp',
 	maxRowHeight : '60dp',
-	
 	editable : true,
-	backgroundColor:'#C2935F',
+	backgroundColor:'#000',
 	search: search,
     filterAttribute:'filter',
 });
@@ -97,8 +62,9 @@ parsearBd = function(){
 
 				var caja = Titanium.UI.createTableViewRow({
 					id : json[i].idSede,
-					hasChild : true,
+					//hasChild : true,
 					filter:json[i].nombre,
+					backgroundColor : '#fff',
 				});
 				var logoSede = Titanium.UI.createImageView({
 					height : '47dp',
@@ -107,7 +73,7 @@ parsearBd = function(){
 					left : '7dp',
 					image : getImage(json[i].logo),
 					touchEnabled : false,
-					backgroundColor : '#fff',
+					backgroundColor : '#000',
 
 				});
 
@@ -119,6 +85,7 @@ parsearBd = function(){
 					},
 					left : '70dp',
 					top : '15dp',
+					//color:'#000',
 					color:'#000',
 					width:'280dp',
 					
@@ -159,6 +126,7 @@ parsearBd = function(){
 			sedesTV.setData(tableData);
 
 }
+
 
 parsearJson = function(num) {
 	var xhr = Ti.Network.createHTTPClient();
@@ -237,10 +205,11 @@ parsearJson = function(num) {
 			}
 			new BaseDeDatos().ActualizarSedes(json);
 			sedesTV.setData(tableData);
+			activityIndicator.hide();
 
 		} catch(E) {
-			Ti.API.info(E);
-			return 0;
+			alert(E);
+			activityIndicator.hide();
 
 		}
 
@@ -250,10 +219,10 @@ parsearJson = function(num) {
 
 
 
+
 if (new BaseDeDatos().NumeroDeFilas()==0){
-	alert('La tabla está vacia, se actualizara');
 	parsearJson(0); 
-	Ti.API.info("Nop hay datos en la tabla");
+	activityIndicator.show();
 	}
 	else{
 		parsearBd();
@@ -264,6 +233,7 @@ if (new BaseDeDatos().NumeroDeFilas()==0){
 	// alert('Actualizando');
 	// parsearJson(1);
 // });
+
 
 sedesTV.addEventListener('click', function(e){
 	
@@ -304,7 +274,7 @@ if(Titanium.Platform.osname == 'android') {
 		//para que se abra la ventana de autentificacion
 		actualizar.addEventListener("click", function(e) {
 			sedesTV.setData();
-	        alert('Actualizando');
+	        activityIndicator.show();
 			parsearJson(1);
 		});
 	}

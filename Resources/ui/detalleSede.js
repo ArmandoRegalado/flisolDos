@@ -12,25 +12,6 @@ var pagina1 = sedeBD[0].url;
 
 var mapaPunto = sedeBD[0].latitud;
 
-//imagen para regresar
-// var view = Ti.UI.createImageView({
-	// image:'../images/BARRITA.png',
-	// width : '320dp',
-	// height : '35dp',
-	// top : '0dp',
-	// //left:'2dp',
-	// //right:'2dp',
-// });
-
-
-// var labelRegreso = Titanium.UI.createLabel({
-	// text:'regresar',
-	// color:'#000',
-// });
-// view.add(labelRegreso);
-
-
-//imagen y logo de flisol
 var logoPantalla = Titanium.UI.createImageView({
 	image:'../images/FLISOLgeneral.png',
 	height:'40dp',
