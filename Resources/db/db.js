@@ -128,4 +128,27 @@ function BaseDeDatos() {
 	return mapa;
 
 }
+
+this.InformacionMapaIndividual = function(id){
+		var db = Ti.Database.open('Flisol');
+		var resultSedesDatos = db.execute('select  latitud, longitud, nombreMapa from MAPAS where idMapa =' + id + ' ');
+		var mapa = [];
+		var l = 0;
+		while(resultSedesDatos.isValidRow()) {
+			var row = new Object();
+			row.latitud = resultSedesDatos.fieldByName("latitud");
+			row.longitud = resultSedesDatos.fieldByName("longitud");
+			row.nombreMapa = resultSedesDatos.fieldByName("nombreMapa");
+			mapa.push(row);
+			l++;
+			Ti.API.info(l);
+			resultSedesDatos.next();
+		}
+		resultSedesDatos.close();
+		return mapa;
+
+	}
+
+
+
 }

@@ -25,7 +25,8 @@ Titanium.include('/data/images.js');
 pagW= function(pagina1){
 
 	var ventanaL = Titanium.UI.createWindow({
-		backgroundColor:'#000'
+		backgroundColor:'#000',
+		navBarHidden:true
 	});
 
 ///////////////////////////////////////////////////////////////////////////////////7
@@ -50,8 +51,7 @@ ventanaL.add(logoPantalla);
 		// touchEnabled:true,
 		
 		borderRadius:7,
-	backgroundColor:'#fff',
-	borderColor:'#f1701c',
+	backgroundColor:'#000',
 	borderWidth:'6',
 	top : '50dp',
 	left:'15dp',

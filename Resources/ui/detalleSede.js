@@ -1,12 +1,13 @@
 Titanium.include('/db/db.js');
 Titanium.include('/data/images.js');
 Titanium.include('/ui/pagina.js');
-Titanium.include('ui/mapa.js')
+Titanium.include('/ui/mapa.js')
 var sede = Ti.UI.currentWindow;
 sede.backgroundColor = '#000';
 sede.animate = true;
 
 var sedeBD = new BaseDeDatos().InformacionSede(sede.ID);
+
 var pagina1 = sedeBD[0].url;
 
 var mapaPunto = sedeBD[0].latitud;
@@ -34,7 +35,7 @@ var logoPantalla = Titanium.UI.createImageView({
 	image:'../images/FLISOLgeneral.png',
 	height:'40dp',
 	width:'230dp',
-	top:'5dp',
+	top:'5dp'
 	//left:'40dp',
 });
 sede.add(logoPantalla);
@@ -42,14 +43,13 @@ sede.add(logoPantalla);
 //cuadro grande contenedor
 var footer = Ti.UI.createView({
 	borderRadius:7,
-	backgroundColor:'#fff',
+	backgroundColor:'#000',
 	borderColor:'#f1701c',
 	borderWidth:'6',
 	//top : '50dp',
 	left:'15dp',
 	right:'15dp',
 	down:'25dp',
-	
 	top : '50dp',
 });
 
@@ -112,12 +112,12 @@ var separador = Titanium.UI.createView({
 	right:'3dp',
 	top:'75dp',
 });
-footer.add(separador);
+//footer.add(separador);
 
 
 //direccion de sede
 var lugar = Ti.UI.createLabel({
-	text : ' ' + sedeBD[0].direccion,
+	text : 'Lugar:  ' + sedeBD[0].direccion,
 	font : {
 		fontSize : '14dp',
 
@@ -127,9 +127,9 @@ var lugar = Ti.UI.createLabel({
 	top : '90dp',
 	left : '15dp',
 	right:'15dp',
-	textAlign : 'left',
-	color : '#332C28',
-	backgroundColor : '#d4d0cd'
+	textAlign : 'center',
+	color : '#fff',
+	backgroundColor : '#000'
 });
 
 
@@ -187,7 +187,11 @@ haciaMapa.addEventListener('click', (function(e){
 	
 	//var mapaPrueba = new mapaL('19.4311','-99.1367');
 //	mapaPrueba.open({modal:true});
-alert(mapaPunto)
+
+var mapaDB = new BaseDeDatos().InformacionMapaIndividual(sede.ID);
+
+var mapaPrueba = new mapaL(mapaDB[0].latitud,mapaDB[0].longitud);
+	mapaPrueba.open({modal:true});
 	
 }));
 
