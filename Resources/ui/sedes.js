@@ -11,6 +11,7 @@ Titanium.include('/json/json.js');
 Titanium.include('/data/images.js');
 
 var sedes = Ti.UI.currentWindow;
+sedes.navBarHidden=true;
 //sedes.backgroundColor = '#000';
 //sedes.backgroundImage = '../image/general.jpg';
 // var view = Titanium.UI.createView({
