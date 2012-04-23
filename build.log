@@ -1,17 +1,19 @@
 Logfile initialized
 [INFO] logfile = /Users/antonio/Downloads/flisolDos/build.log
-[DEBUG] /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/builder.py install FlisolFinal /Users/antonio/Programas/Android SDK /Users/antonio/Downloads/flisolDos com.FAM.flisolfinal 5
+[DEBUG] /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/builder.py simulator FlisolFinal /Users/antonio/Programas/Android SDK /Users/antonio/Downloads/flisolDos com.FAM.flisolfinal 5 HVGA 
+[INFO] Building FlisolFinal for Android ... one moment
 [INFO] Titanium SDK version: 2.0.1 (04/12/12 16:33 999c68a)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015311 seconds on emulator to get ready
+[DEBUG] waited 0.020076 seconds on emulator to get ready
 [DEBUG] com.FAM.flisolfinal installed? True
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: /Users/antonio/Downloads/flisolDos/Resources/ui/redes.js => /Users/antonio/Downloads/flisolDos/build/android/bin/assets/Resources/ui/redes.js
+[TRACE] COPYING MODIFIED FILE: /Users/antonio/Downloads/flisolDos/Resources/ui/sedes.js => /Users/antonio/Downloads/flisolDos/build/android/bin/assets/Resources/ui/sedes.js
 [TRACE] Generating Java Classes
-[TRACE] adb devices returned 1 devices/emulators
+[INFO] Titanium SDK version: 2.0.1 (04/12/12 16:33 999c68a)
+[DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Processing Android resource drawables
 [DEBUG] copying app icon: /Users/antonio/Downloads/flisolDos/build/android/bin/assets/Resources/appicon.png
@@ -44,9 +46,6 @@ Logfile initialized
 [DEBUG] adding /Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/R.java to javac build list
 [DEBUG] Building Java Sources: "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalActivity.java" "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalAppInfo.java" "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalApplication.java" "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/R.java"
 [INFO] Compiling Android Resources... This could take some time
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Android classes.dex built
@@ -129,7 +128,6 @@ Logfile initialized
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
-[TRACE] adb devices returned 1 devices/emulators
 [DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
 [DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
 [DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
@@ -154,11 +152,8 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.018968 seconds on emulator to get ready
+[DEBUG] waited 0.016660 seconds on emulator to get ready
 [INFO] Installing application on device
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
@@ -185,7 +180,184 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
+[ERROR] Timed out waiting for emulator to be ready, you may need to close the emulator and try again
+[DEBUG] com.FAM.flisolfinal installed? False
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[DEBUG] copying app icon: /Users/antonio/Downloads/flisolDos/build/android/bin/assets/Resources/appicon.png
+[DEBUG] generating theme.xml
+[DEBUG] found drawable-long-land-hdpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-land-hdpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-land-hdpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-long-land-hdpi/background.png
+[DEBUG] found drawable-long-land-ldpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-land-ldpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-land-ldpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-long-land-ldpi/background.png
+[DEBUG] found drawable-long-port-hdpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-port-hdpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-port-hdpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-long-port-hdpi/background.png
+[DEBUG] found drawable-long-port-ldpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-port-ldpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-long-port-ldpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-long-port-ldpi/background.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-land-hdpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-land-hdpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-notlong-land-hdpi/background.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-land-ldpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-land-ldpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-notlong-land-ldpi/background.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-land-mdpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-land-mdpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-notlong-land-mdpi/background.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-port-hdpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-port-hdpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-notlong-port-hdpi/background.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-port-ldpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-port-ldpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-notlong-port-ldpi/background.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-port-mdpi/default.png
+[DEBUG] copying /Users/antonio/Downloads/flisolDos/Resources/android/images/res-notlong-port-mdpi/default.png splash screen to /Users/antonio/Downloads/flisolDos/build/android/res/drawable-notlong-port-mdpi/background.png
+[DEBUG] found splash screen at /Users/antonio/Downloads/flisolDos/build/android/bin/assets/Resources/default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalActivity.java to javac build list
+[DEBUG] adding /Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalAppInfo.java to javac build list
+[DEBUG] adding /Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalApplication.java to javac build list
+[DEBUG] adding /Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/R.java to javac build list
+[DEBUG] Building Java Sources: "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalActivity.java" "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalAppInfo.java" "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/FlisolfinalApplication.java" "/Users/antonio/Downloads/flisolDos/build/android/gen/com/FAM/flisolfinal/R.java"
+[INFO] Waiting for SDCard to become available..
+[ERROR] Error checking for SDCard using 'mount'
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: /Users/antonio/Downloads/flisolDos/build/android/bin/app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/data/images.js
+[DEBUG] from resource zip => assets/Resources/db/db.js
+[DEBUG] from resource zip => assets/Resources/images/ACERCA.png
+[DEBUG] from resource zip => assets/Resources/images/BARRITA.png
+[DEBUG] from resource zip => assets/Resources/images/BotonAcercaChico.png
+[DEBUG] from resource zip => assets/Resources/images/BotonMapaChico.png
+[DEBUG] from resource zip => assets/Resources/images/BotonRedesChico.png
+[DEBUG] from resource zip => assets/Resources/images/BotonSedesChico.png
+[DEBUG] from resource zip => assets/Resources/images/FLISOLgeneral.png
+[DEBUG] from resource zip => assets/Resources/images/MAPA.png
+[DEBUG] from resource zip => assets/Resources/images/Orange_background.jpg
+[DEBUG] from resource zip => assets/Resources/images/REDES.png
+[DEBUG] from resource zip => assets/Resources/images/SEDES.png
+[DEBUG] from resource zip => assets/Resources/images/acerca1.png
+[DEBUG] from resource zip => assets/Resources/images/acerca10.png
+[DEBUG] from resource zip => assets/Resources/images/acerca11.png
+[DEBUG] from resource zip => assets/Resources/images/acerca12.png
+[DEBUG] from resource zip => assets/Resources/images/acerca2.png
+[DEBUG] from resource zip => assets/Resources/images/acerca3.png
+[DEBUG] from resource zip => assets/Resources/images/acerca4.png
+[DEBUG] from resource zip => assets/Resources/images/acerca5.png
+[DEBUG] from resource zip => assets/Resources/images/acerca6.png
+[DEBUG] from resource zip => assets/Resources/images/acerca7.png
+[DEBUG] from resource zip => assets/Resources/images/acerca8.png
+[DEBUG] from resource zip => assets/Resources/images/acerca9.png
+[DEBUG] from resource zip => assets/Resources/images/bird.png
+[DEBUG] from resource zip => assets/Resources/images/calendar.png
+[DEBUG] from resource zip => assets/Resources/images/casa.png
+[DEBUG] from resource zip => assets/Resources/images/contacto.png
+[DEBUG] from resource zip => assets/Resources/images/dos.png
+[DEBUG] from resource zip => assets/Resources/images/facebook.png
+[DEBUG] from resource zip => assets/Resources/images/flisol1.JPG
+[DEBUG] from resource zip => assets/Resources/images/flisol2.JPG
+[DEBUG] from resource zip => assets/Resources/images/flisol3.jpg
+[DEBUG] from resource zip => assets/Resources/images/haciaMapa.png
+[DEBUG] from resource zip => assets/Resources/images/haciaPagina.png
+[DEBUG] from resource zip => assets/Resources/images/icono2.png
+[DEBUG] from resource zip => assets/Resources/images/map-marker.png
+[DEBUG] from resource zip => assets/Resources/images/reload.png
+[DEBUG] from resource zip => assets/Resources/images/tres.png
+[DEBUG] from resource zip => assets/Resources/images/twitter.png
+[DEBUG] from resource zip => assets/Resources/images/uno.png
+[DEBUG] from resource zip => assets/Resources/json/js.js
+[DEBUG] from resource zip => assets/Resources/json/json.js
+[DEBUG] from resource zip => assets/Resources/ui/acerca.js
+[DEBUG] from resource zip => assets/Resources/ui/detalleSede.js
+[DEBUG] from resource zip => assets/Resources/ui/main.js
+[DEBUG] from resource zip => assets/Resources/ui/mapa.js
+[DEBUG] from resource zip => assets/Resources/ui/mapas.js
+[DEBUG] from resource zip => assets/Resources/ui/pagina.js
+[DEBUG] from resource zip => assets/Resources/ui/redes.js
+[DEBUG] from resource zip => assets/Resources/ui/sedes.js
+[DEBUG] from resource zip => assets/Resources/ui/twitter.js
+[DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
+[DEBUG] from resource zip => assets/Resources/KS_nav_views.png
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/appicon.png
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/Resources/ti.cloud.js
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/close.png
+[DEBUG] from resource zip => res/drawable/facebook_login.png
+[DEBUG] from resource zip => res/drawable/facebook_login_down.png
+[DEBUG] from resource zip => res/drawable/facebook_login_wide.png
+[DEBUG] from resource zip => res/drawable/facebook_login_wide_down.png
+[DEBUG] from resource zip => res/drawable/facebook_logout.png
+[DEBUG] from resource zip => res/drawable/facebook_logout_down.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from resource zip => res/drawable-hdpi/close.png
+[DEBUG] from resource zip => res/drawable-ldpi/close.png
+[DEBUG] from resource zip => res/drawable-long-land-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-land-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR /Users/antonio/Library/Application Support/Titanium/mobilesdk/osx/2.0.1.GA2/android/modules/titanium-facebook.jar => ti/modules/titanium/facebook/LICENSE
+[DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[ERROR] Timed out waiting for emulator to be ready, you may need to close the emulator and try again
+[INFO] Installing application on emulator

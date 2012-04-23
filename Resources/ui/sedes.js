@@ -145,7 +145,7 @@ parsearJson = function(num) {
 		//alert(json[i].nombre);
 				var caja = Titanium.UI.createTableViewRow({
 					id : json[i].id_sede,
-					hasChild : true,
+					hasChild : false,
 					filter:json[i].nombre,
 					backgroundColor : '#fff',
 				});
