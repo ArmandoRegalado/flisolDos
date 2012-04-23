@@ -1,7 +1,8 @@
 mapaL= function(lat,log){
 
 	var ventanaM = Titanium.UI.createWindow({
-		backgroundColor:'#fff'
+		backgroundColor:'#fff',
+		navBarHidden:true
 	});
 
 
