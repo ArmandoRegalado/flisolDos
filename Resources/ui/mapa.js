@@ -21,6 +21,14 @@ ventanaM.add(logoPantalla);
 	width : Ti.UI.SIZE,
 		});
 
+var detalle = Titanium.Map.createAnnotation({
+latitude:parseFloat(lat), 
+longitude:parseFloat(log),
+pincolor:Titanium.Map.ANNOTATION_RED,
+animate:true,
+});
+
+
 
 var mapview = Titanium.Map.createView({
     mapType: Titanium.Map.STANDARD_TYPE,
@@ -29,7 +37,7 @@ var mapview = Titanium.Map.createView({
     animate:true,
     regionFit:true,
     userLocation:true,
-
+	annotations:[detalle]
 });
 
 MapaView.add(mapview);

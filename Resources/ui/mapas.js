@@ -31,7 +31,7 @@ parsearMapa= function(){
 				latitude : parseFloat(json[i].latitud),
 				longitude : parseFloat(json[i].longitud),
 				title : json[i].nombreMapa,
-				pincolor : Titanium.Map.ANNOTATION_GREEN,
+				image:'../images/map-marker.png',
 				animate : true,
 				myid : parseInt(json[i].id_sede)
 			});

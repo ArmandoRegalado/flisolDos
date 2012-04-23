@@ -11,8 +11,7 @@ Titanium.include('/json/json.js');
 Titanium.include('/data/images.js');
 
 var sedes = Ti.UI.currentWindow;
-sedes.navBarHidden=true;
-//sedes.backgroundColor = '#000';
+sedes.backgroundColor = '#000';
 //sedes.backgroundImage = '../image/general.jpg';
 // var view = Titanium.UI.createView({
 	// backgroundColor : '#f1701c',
@@ -32,7 +31,7 @@ sedes.navBarHidden=true;
 // buscador
 //
 var search = Titanium.UI.createSearchBar({
-	barColor : '#f38239',
+	//barColor : '#f38239',
 	height : '40dp',
 	hintText : 'Busca tu sede',
 	top : '0dp',
@@ -71,9 +70,9 @@ sedes.add(logoPantalla);
 //
 
 var sedesTV = Titanium.UI.createTableView({
-	borderRadius:7,
-	borderColor:'#f1701c',
-	borderWidth:'6',
+	//borderRadius:7,
+	//borderColor:'#f1701c',
+	//borderWidth:'6',
 	top : '50dp',
 	left:'15dp',
 	right:'15dp',
@@ -83,7 +82,7 @@ var sedesTV = Titanium.UI.createTableView({
 	maxRowHeight : '60dp',
 	
 	editable : true,
-	backgroundColor:'#f0efee',
+	//backgroundColor:'#f0efee',
 	search: search,
     filterAttribute:'filter',
 });
