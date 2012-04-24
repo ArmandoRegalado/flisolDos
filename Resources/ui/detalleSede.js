@@ -6,6 +6,7 @@ var sede = Ti.UI.currentWindow;
 sede.backgroundColor = '#000';
 sede.animate = true;
 
+
 var sedeBD = new BaseDeDatos().InformacionSede(sede.ID);
 
 

@@ -107,21 +107,22 @@ parsearJson = function(num) {
 		try {
 			var tableData = [];
 			json = JSON.parse(this.responseText);
+	
 
 			if(num==1){
 				new BaseDeDatos().EliminarTablas();
 				};
 				
-
-			for( i = 0; i < json.length; i++) {
+			var cuenta = json.length;
+			for( i = 0; i < cuenta; i++) {
 
 				var caja = Titanium.UI.createTableViewRow({
 					id : json[i].id_sede,
-					pagina: json[i].url,
 					hasChild : false,
 					filter:json[i].nombre,
 					backgroundColor : '#fff',
 				});
+				
 				var logoSede = Titanium.UI.createImageView({
 					height : '47dp',
 					width : '47dp',
@@ -147,7 +148,7 @@ parsearJson = function(num) {
 					touchEnabled : false
 				});
 				var direccionSede = Titanium.UI.createLabel({
-					text : json[i].direccion.substring(0, 40),
+					text : json[i].direccion,
 					font : {
 						fontSize : '12dp'
 					},
@@ -209,24 +210,20 @@ if (new BaseDeDatos().NumeroDeFilas()==0){
 		parsearBd();
 	}
 
-// view.addEventListener('click', function(e){
-	// sedesTV.setData();
-	// alert('Actualizando');
-	// parsearJson(1);
-// });
+
 
 
 sedesTV.addEventListener('click', function(e){
 	
 	E=e.rowData.id;
 	
-	var sede = Ti.UI.createWindow({
+	var sedeL = Ti.UI.createWindow({
 		url:'/ui/detalleSede.js',
 		ID:E,
 		navBarHidden:true ,
 		
 	});
-	sede.open({modal:true});
+	sedeL.open({modal:true});
 
 });
 

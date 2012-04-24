@@ -2,7 +2,7 @@ Titanium.include('/json/json.js');
 
 function BaseDeDatos() {
 	var db = Titanium.Database.open("Flisol");
-	db.execute("CREATE TABLE IF NOT EXISTS SEDES(idSede INTEGER PRIMARY KEY NOT NULL,  nombre TEXT NOT NULL , direccion  TEXT NOT NULL, horario   TEXT NOT NULL, contacto TEXT NOT NULL, url TEXT NOT NULL, logo TEXT NOT NULL)");
+	db.execute("CREATE TABLE IF NOT EXISTS SEDES(idSede INTEGER PRIMARY KEY NOT NULL,  nombre TEXT NOT NULL , direccion  TEXT NOT NULL, horario   TEXT NOT NULL, contacto TEXT NOT NULL, url TEXT NULL, logo TEXT NOT NULL)");
 	db.execute("CREATE TABLE IF NOT EXISTS MAPAS(idMapa INTEGER PRIMARY KEY NOT NULL, latitud DOUBLE NOT NULL, longitud DOUBLE NOT NULL, nombreMapa TEXT NOT NULL)");
 	db.close();
 	iconDir = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'icons');
@@ -24,10 +24,11 @@ function BaseDeDatos() {
 	this.ActualizarSedes = function(json) {
 
 		var db = Ti.Database.open("Flisol");
-		for(var i = 0; i < json.length; i++) {
+		var cuenta = json.length;
+		for(var i = 0; i < cuenta; i++) {
 			var sede = json[i];
-			db.execute('INSERT INTO SEDES(idSede, nombre, direccion,horario, contacto, url, logo) VALUES(?,?,?,?,?,?,?)', sede.idSede, sede.nombre, sede.direccion, sede.horario, sede.contacto, sede.url, sede.logo);
-			db.execute('INSERT INTO MAPAS(idMapa, latitud, longitud, nombreMapa) VALUES(?,?,?,?)', sede.idSede, sede.latitud, sede.longitud,sede.nombre);
+			db.execute('INSERT INTO SEDES(idSede, nombre, direccion,horario, contacto, url, logo) VALUES(?,?,?,?,?,?,?)', sede.id_sede, sede.nombre, sede.direccion, sede.horario, sede.contacto, sede.url, sede.logo);
+			db.execute('INSERT INTO MAPAS(idMapa, latitud, longitud, nombreMapa) VALUES(?,?,?,?)', sede.id_sede, sede.latitud, sede.longitud,sede.nombre);
 			
 		}
 		db.close();
@@ -91,7 +92,6 @@ function BaseDeDatos() {
 		var db = Ti.Database.open('Flisol');
 		var resultSedesDatos = db.execute('select  idSede,nombre,horario,direccion, logo, contacto, url from SEDES where idSede =' + id + ' ');
 		var sede = [];
-		var l = 0;
 		while(resultSedesDatos.isValidRow()) {
 			var row = new Object();
 			row.idSede = resultSedesDatos.fieldByName("idSede");
@@ -102,8 +102,6 @@ function BaseDeDatos() {
 			row.contacto = resultSedesDatos.fieldByName("contacto");
 			row.url = resultSedesDatos.fieldByName("url");
 			sede.push(row);
-			l++;
-			Ti.API.info(l);
 			resultSedesDatos.next();
 		}
 		resultSedesDatos.close();
