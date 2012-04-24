@@ -13,7 +13,7 @@ Titanium.include('/data/images.js');
 var sedes = Ti.UI.currentWindow;
 sedes.backgroundColor = '#000';
 
-var activityIndicator = Ti.UI.createActivityIndicator({});
+var activityIndicator = Ti.UI.createActivityIndicator();
 
 var search = Titanium.UI.createSearchBar({
 	  barColor: '#385292', 
@@ -30,15 +30,12 @@ var logoPantalla = Titanium.UI.createImageView({
 	height:'40dp',
 	width:'230dp',
 	top:'5dp',
-	//left:'40dp',
 });
 sedes.add(logoPantalla);
 
 
 var sedesTV = Titanium.UI.createTableView({
-	//borderRadius:7,
-	//borderColor:'#f1701c',
-	//borderWidth:'6',
+
 	top : '50dp',
 	left:'15dp',
 	right:'15dp',
@@ -92,33 +89,8 @@ parsearBd = function(){
 					touchEnabled : false
 				});
 
-				// var direccionSede = Titanium.UI.createLabel({
-					// text : json[i].direccion.substring(0, 40),
-					// font : {
-						// fontSize : '12dp'
-					// },
-					// left : '60dp',
-					// top : '10dp',
-					// color : '#1f1f1d',
-					// touchEnabled : false
-				// });
-// 
-				// var horarioSede = Titanium.UI.createLabel({
-					// text : json[i].horario,
-					// font : {
-						// fontSize : '12dp',
-					// },
-					// height : 'auto',
-					// left : '64dp',
-					// top : '38dp',
-					// color : '#878681',
-					// touchEnabled : false
-
-			//	});
 			caja.add(logoSede);
 			caja.add(nombreSede);
-			//caja.add(direccionSede);
-			//caja.add(horarioSede);
 			tableData.push(caja);
 
 			}
@@ -139,11 +111,13 @@ parsearJson = function(num) {
 			if(num==1){
 				new BaseDeDatos().EliminarTablas();
 				};
+				
 
 			for( i = 0; i < json.length; i++) {
-		//alert(json[i].nombre);
+
 				var caja = Titanium.UI.createTableViewRow({
 					id : json[i].id_sede,
+					pagina: json[i].url,
 					hasChild : false,
 					filter:json[i].nombre,
 					backgroundColor : '#fff',
@@ -197,12 +171,11 @@ parsearJson = function(num) {
 				});
 			caja.add(logoSede);
 			caja.add(nombreSede);
-			//caja.add(direccionSede);
-			//caja.add(horarioSede);
 			tableData.push(caja);
 
 
 			}
+			//new BaseDeDatos().ActualizarSedes(json);
 			new BaseDeDatos().ActualizarSedes(json);
 			sedesTV.setData(tableData);
 			activityIndicator.hide();
@@ -221,8 +194,16 @@ parsearJson = function(num) {
 
 
 if (new BaseDeDatos().NumeroDeFilas()==0){
-	parsearJson(0); 
+	if(Titanium.Network.online) {
+				parsearJson(0); 
 	activityIndicator.show();
+
+			} else {
+				alert('Necesitas Conexion a Internet');
+			}
+
+	
+	
 	}
 	else{
 		parsearBd();
@@ -240,7 +221,6 @@ sedesTV.addEventListener('click', function(e){
 	E=e.rowData.id;
 	
 	var sede = Ti.UI.createWindow({
-		title:e.rowData.id,
 		url:'/ui/detalleSede.js',
 		ID:E,
 		navBarHidden:true ,
@@ -275,9 +255,17 @@ if(Titanium.Platform.osname == 'android') {
 		//autenficacion a falso, y se activa el evento desautenticacion
 		//para que se abra la ventana de autentificacion
 		actualizar.addEventListener("click", function(e) {
-			sedesTV.setData();
+			if(Titanium.Network.online) {
+				sedesTV.setData();
 	        activityIndicator.show();
 			parsearJson(1);
+
+			} else {
+				alert('Necesitas Conexion a Internet');
+			}
+
+			
+			
 		});
 	}
 }

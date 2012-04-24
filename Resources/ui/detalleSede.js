@@ -1,16 +1,14 @@
 Titanium.include('/db/db.js');
 Titanium.include('/data/images.js');
 Titanium.include('/ui/pagina.js');
-Titanium.include('/ui/mapa.js')
+Titanium.include('/ui/mapa.js');
 var sede = Ti.UI.currentWindow;
 sede.backgroundColor = '#000';
 sede.animate = true;
 
 var sedeBD = new BaseDeDatos().InformacionSede(sede.ID);
 
-var pagina1 = sedeBD[0].url;
 
-var mapaPunto = sedeBD[0].latitud;
 
 var logoPantalla = Titanium.UI.createImageView({
 	image:'../images/FLISOLgeneral.png',
@@ -126,7 +124,7 @@ footer.add(haciaPagina);
 
 haciaPagina.addEventListener('click', (function(){
 	if(Titanium.Network.online) {
-				var paginas = new pagW(pagina1);
+				var paginas = new pagW(sedeBD[0].url);
 	paginas.open({modal:true});
 
 			} else {

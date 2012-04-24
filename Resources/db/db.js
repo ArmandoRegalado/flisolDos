@@ -28,7 +28,7 @@ function BaseDeDatos() {
 			var sede = json[i];
 			db.execute('INSERT INTO SEDES(idSede, nombre, direccion,horario, contacto, url, logo) VALUES(?,?,?,?,?,?,?)', sede.idSede, sede.nombre, sede.direccion, sede.horario, sede.contacto, sede.url, sede.logo);
 			db.execute('INSERT INTO MAPAS(idMapa, latitud, longitud, nombreMapa) VALUES(?,?,?,?)', sede.idSede, sede.latitud, sede.longitud,sede.nombre);
-			Ti.API.info('Guardando datos  --DB-- # ' + i);
+			
 		}
 		db.close();
 
