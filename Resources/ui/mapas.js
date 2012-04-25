@@ -268,7 +268,7 @@ else
 		Ti.API.info('speed ' + speed);
 		currentLocation.text = 'long:' + longitude + ' lat: ' + latitude;
 
-		Titanium.API.info('geo - current location: ' + new Date(timestamp) + ' long ' + longitude + ' lat ' + latitude + ' accuracy ' + accuracy);
+		//alert('geo - current location: ' + new Date(timestamp) + ' long ' + longitude + ' lat ' + latitude + ' accuracy ' + accuracy);
 	});
 
 	//

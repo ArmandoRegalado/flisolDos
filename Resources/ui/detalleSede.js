@@ -115,7 +115,7 @@ var lugar = Ti.UI.createLabel({
 
 //imagen  hacia web
 var haciaPagina = Titanium.UI.createImageView({
-	image:'../images/haciaPagina.png',
+	image:'../images/web.png',
 	height:'55dp',
 	width:'200dp',
 	top:'50%',
@@ -137,7 +137,7 @@ haciaPagina.addEventListener('click', (function(){
 
 
 var haciaMapa = Titanium.UI.createImageView({
-	image:'../images/haciaMapa.png',
+	image:'../images/mapir.png',
 	height:'55dp',
 	width:'200dp',
 	top:'70%',
